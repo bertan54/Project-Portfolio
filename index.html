@@ -166,6 +166,7 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
   nav{padding:16px 24px}.nav-links{display:none}.hero{padding:100px 24px 60px}.hero-stats{display:none}
   .si{padding:70px 24px}.ag{grid-template-columns:1fr;gap:40px}.pg{grid-template-columns:1fr}
   .pc-wide{grid-column:span 1}.pc-wide-inner{grid-template-columns:1fr}
+  .pg>.pc{grid-column:1/-1!important}.pg>.pc>div[style*="grid-template-columns"]{grid-template-columns:1fr!important}
   .cw{grid-template-columns:1fr;gap:48px}footer{flex-direction:column;gap:12px;text-align:center}
 }
 
@@ -221,18 +222,9 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
       </div>
       <div class="at reveal">
         <h3>From Equations to Engineering</h3>
-        <p>I'm a Mechanical Engineering student at Ko&ccedil; University, focused on bridging theoretical knowledge with practical engineering through simulation, analysis, and hands-on design.</p>
-        <p>My work spans structural integrity analysis, computational fluid dynamics, dynamic system modeling, and physical mechanism prototyping — always with an emphasis on precision and real-world applicability.</p>
-        <div class="sg">
-          <div class="ski"><span class="skd"></span>ANSYS Mechanical</div>
-          <div class="ski"><span class="skd"></span>ANSYS Fluent (CFD)</div>
-          <div class="ski"><span class="skd"></span>Siemens NX</div>
-          <div class="ski"><span class="skd"></span>MATLAB</div>
-          <div class="ski"><span class="skd"></span>Python</div>
-          <div class="ski"><span class="skd"></span>FEA &middot; Structural</div>
-          <div class="ski"><span class="skd"></span>CFD</div>
-          <div class="ski"><span class="skd"></span>Dynamic Simulation</div>
-        </div>
+        <p>I'm a Mechanical Engineering student at Ko&ccedil; University with a double major in Economics, and I spent an Erasmus exchange semester at the University of Mannheim in Germany.</p>
+        <p>My internships have taken me from the shop floor to R&amp;D. At Repkon I worked alongside process engineers on CNC turning, milling and 5-axis machining, tooling strategies and production routes. At ASELSAN, in the Slip Ring Design Engineering team, I carried out a rotor balancing study that linked balance quality grades to manufacturing tolerances, assembly and acceptance testing.</p>
+        <p>Through my coursework I've built hands-on experience in structural FEA and CFD in ANSYS, CAD and motion simulation in Siemens NX, and numerical modelling in MATLAB. I'm most interested in mechanical design and manufacturing, where my economics background helps me think about cost, production and supply chain alongside the engineering.</p>
       </div>
     </div>
   </div>
@@ -244,77 +236,17 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
     <div class="sh reveal"><span class="sn">02</span><h2>Projects</h2><div class="sl"></div></div>
     <div class="pg">
 
-      <!-- P01: Deep-Sea Submersible -->
-      <div class="pc reveal" onclick="openModal('m1')">
-        <img src="Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-12-10%20155919.png" class="pimg" alt="Hull FEA">
-        <div class="po"></div><div class="ptg">FEA</div>
-        <div class="pb"><div class="pnum">P-01</div><div class="ptitle">Deep-Sea Pressure Hull Analysis</div>
-        <div class="pdesc">FEA of a submersible pressure hull under extreme hydrostatic loading, with parametric wall-thickness and elasto-plastic studies.</div>
-        <div class="ptools"><span class="tt">ANSYS</span><span class="tt">Von-Mises</span><span class="tt">Elasto-Plastic</span></div>
-        </div><div class="parr">&rarr;</div>
-      </div>
-
-      <!-- P02: Bolted Joint -->
-      <div class="pc reveal" onclick="openModal('m2')">
-        <img src="Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-01-11%20195256.png" class="pimg" alt="Bolted Joint">
-        <div class="po"></div><div class="ptg">FEA</div>
-        <div class="pb"><div class="pnum">P-02</div><div class="ptitle">Bolted Joint FE Modeling</div>
-        <div class="pdesc">Nonlinear FEA of a pretensioned bolted assembly — pretension, contact, separation analysis, and bolt grade optimization.</div>
-        <div class="ptools"><span class="tt">ANSYS</span><span class="tt">Contact</span><span class="tt">Optimization</span></div>
-        </div><div class="parr">&rarr;</div>
-      </div>
-
-      <!-- P03: CFD Pipe -->
-      <div class="pc reveal" onclick="openModal('m3')">
-        <img src="Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-12-07%20160552.png" class="pimg" alt="Pipe CFD">
-        <div class="po"></div><div class="ptg">CFD</div>
-        <div class="pb"><div class="pnum">P-03</div><div class="ptitle">CFD — Pipe Expansion Flow</div>
-        <div class="pdesc">CFD analysis of flow separation and reattachment in a sudden pipe expansion using multiple turbulence models.</div>
-        <div class="ptools"><span class="tt">Fluent</span><span class="tt">k-&epsilon;</span><span class="tt">k-&omega;</span></div>
-        </div><div class="parr">&rarr;</div>
-      </div>
-
-      <!-- P04: Mixing Elbow -->
-      <div class="pc reveal" onclick="openModal('m4')">
-        <img src="Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-12-25%20121837.png" class="pimg" alt="Mixing Elbow">
-        <div class="po"></div><div class="ptg">CFD</div>
-        <div class="pb"><div class="pnum">P-04</div><div class="ptitle">CFD — Mixing Elbow Heat Transfer</div>
-        <div class="pdesc">2D and 3D CFD of a mixing elbow with coupled flow and heat transfer, capturing secondary Dean vortex structures.</div>
-        <div class="ptools"><span class="tt">Fluent</span><span class="tt">Heat Transfer</span><span class="tt">3D</span></div>
-        </div><div class="parr">&rarr;</div>
-      </div>
-
-      <!-- P05: Static FEA -->
-      <div class="pc reveal" onclick="openModal('m5')">
-        <img src="Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-10-25%20191912.png" class="pimg" alt="Static FEA">
-        <div class="po"></div><div class="ptg">FEA</div>
-        <div class="pb"><div class="pnum">P-05</div><div class="ptitle">Static Structural Stress Analysis</div>
-        <div class="pdesc">Static FEA of a mechanical component — stress distribution mapping and concentration zone identification.</div>
-        <div class="ptools"><span class="tt">ANSYS</span><span class="tt">Von-Mises</span><span class="tt">Mesh</span></div>
-        </div><div class="parr">&rarr;</div>
-      </div>
-
-      <!-- P06: Nozzle -->
-      <div class="pc reveal" onclick="openModal('m6')">
-        <img src="Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-03-26%20001313.png" class="pimg" alt="Nozzle">
-        <div class="po"></div><div class="ptg">CFD</div>
-        <div class="pb"><div class="pnum">P-06</div><div class="ptitle">Converging Nozzle Pressure Analysis</div>
-        <div class="pdesc">CFD simulation of pressure field through a converging nozzle, mapping inlet-to-outlet pressure drop characteristics.</div>
-        <div class="ptools"><span class="tt">Fluent</span><span class="tt">Pressure</span><span class="tt">Nozzle</span></div>
-        </div><div class="parr">&rarr;</div>
-      </div>
-
-      <!-- P07: Generator (full width) -->
-      <div class="pc pc-wide reveal" onclick="openModal('m7')">
+      <!-- P10: ASELSAN Internship — Slip Ring Rotor Balancing (wide) -->
+      <div class="pc pc-wide reveal" onclick="openModal('m10')">
         <div class="pc-wide-inner">
-          <img src="genereator%20photo.png" class="pimg" style="aspect-ratio:auto;height:100%;object-fit:cover" alt="Generator">
+          <img src="aselsan-slip-ring-balancing.gif" class="pimg" style="aspect-ratio:auto;height:100%;object-fit:contain;background:#080c10" alt="Slip ring rotor unbalance animation">
           <div class="pb pb-side">
-            <div class="pnum">P-07 &middot; Group Project</div>
-            <div class="ptitle" style="font-size:22px">Gasoline Generator — Reverse Engineering</div>
-            <div class="pdesc" style="font-size:14px;margin-bottom:20px">Group project: physical disassembly, 3D CAD modeling, technical drafting, static structural analysis, and manufacturing research of a gasoline generator.</div>
-            <div class="ptools"><span class="tt">Siemens NX</span><span class="tt">ANSYS</span><span class="tt">Reverse Engineering</span><span class="tt">Manufacturing</span></div>
+            <div class="pnum">P-10 &middot; Internship &middot; ASELSAN</div>
+            <div class="ptitle" style="font-size:22px">Mass Unbalance in High-Speed Slip Ring Systems</div>
+            <div class="pdesc" style="font-size:14px;margin-bottom:20px">R&amp;D internship study: balance grade selection, rigid-rotor verification, plane-count decision and a full manufacturing &amp; assembly error budget for a slip ring rotor — showing that assembly, not machining precision, governs residual unbalance.</div>
+            <div class="ptools"><span class="tt">ISO 21940</span><span class="tt">Rotor Balancing</span><span class="tt">Tolerance Analysis</span><span class="tt">Error Budget</span></div>
           </div>
-        </div><div class="ptg">Mechanism</div>
+        </div><div class="ptg">Internship</div>
       </div>
 
       <!-- P08: Rotational-to-Linear + dynamics GIF (wide) -->
@@ -324,7 +256,7 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
           <div class="pb pb-side">
             <div class="pnum">P-08 &middot; Dynamic Mechanism</div>
             <div class="ptitle" style="font-size:22px">Rotational-to-Linear Motion Mechanism</div>
-            <div class="pdesc" style="font-size:14px;margin-bottom:20px">CAD design and animation of a gear-cam-slider system converting rotational input to linear output through spur gears, connecting rods, and guide rails.</div>
+            <div class="pdesc" style="font-size:14px;margin-bottom:20px">MECH 206 group project (5 members): a working prototype that converts the rotation of a stepper motor into oscillating linear motion through a 20&deg; spur gear train, an L-bar, a centre rod and slider-guided side rods. Designed and motion-simulated in Siemens NX, built from laser-cut plexiglass and 3D-printed parts with Arduino motor control, and validated by comparing video-tracked motion against the derived dynamic equations in MATLAB.</div>
             <div class="ptools"><span class="tt">CAD</span><span class="tt">Kinematics</span><span class="tt">Gear Design</span><span class="tt">Motion Analysis</span></div>
           </div>
         </div><div class="ptg">CAD</div>
@@ -337,10 +269,83 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
           <div class="pb" style="display:flex;flex-direction:column;justify-content:center;border-top:none;border-left:1px solid var(--border);padding:40px">
             <div class="pnum">P-09 &middot; MATLAB</div>
             <div class="ptitle" style="font-size:22px">Moving &amp; Bouncing Balls — Dynamic Simulation</div>
-            <div class="pdesc" style="font-size:14px;margin-bottom:20px">MATLAB simulation of multi-body elastic collisions in a 2D domain, with real-time energy conservation tracking and momentum-based numerical algorithm.</div>
+            <div class="pdesc" style="font-size:14px;margin-bottom:20px">MECH 307 project: a MATLAB simulation of multiple particles moving and colliding inside a 2D domain. Each impact is solved analytically from conservation of linear momentum and the coefficient of restitution, turning the theory of particle kinetics into a step-by-step numerical algorithm whose correctness is checked with live energy-conservation graphs.</div>
             <div class="ptools"><span class="tt">MATLAB</span><span class="tt">Rigid Body Dynamics</span><span class="tt">Energy Conservation</span><span class="tt">Numerical Simulation</span></div>
           </div>
         </div><div class="ptg">MATLAB</div>
+      </div>
+
+      <!-- P01: Deep-Sea Submersible -->
+      <div class="pc reveal" onclick="openModal('m1')">
+        <img src="Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-12-10%20155919.png" class="pimg" alt="Hull FEA">
+        <div class="po"></div><div class="ptg">FEA</div>
+        <div class="pb"><div class="pnum">P-01</div><div class="ptitle">Deep-Sea Pressure Hull Analysis</div>
+        <div class="pdesc">Inspired by the Titan submersible incident: ANSYS analysis of a carbon-fibre hull with titanium end caps at 2,000&ndash;4,500 m depth, including a wall-thickness study (40&ndash;100 mm) and an elasto-plastic analysis to find the yield pressure.</div>
+        <div class="ptools"><span class="tt">ANSYS</span><span class="tt">Von-Mises</span><span class="tt">Elasto-Plastic</span></div>
+        </div><div class="parr">&rarr;</div>
+      </div>
+
+      <!-- P02: Bolted Joint -->
+      <div class="pc reveal" onclick="openModal('m2')">
+        <img src="Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-01-11%20195256.png" class="pimg" alt="Bolted Joint">
+        <div class="po"></div><div class="ptg">FEA</div>
+        <div class="pb"><div class="pnum">P-02</div><div class="ptitle">Bolted Joint FE Modeling</div>
+        <div class="pdesc">Nonlinear FEA of a pretensioned bolted lap joint with frictional contact. The separation force was found at ~45.5 kN by incremental loading, and the bolt was then sized for a 6 kN service load (Class 5.8, 15 kN preload, SF &ge; 1.3).</div>
+        <div class="ptools"><span class="tt">ANSYS</span><span class="tt">Contact</span><span class="tt">Optimization</span></div>
+        </div><div class="parr">&rarr;</div>
+      </div>
+
+      <!-- P03: CFD Pipe -->
+      <div class="pc reveal" onclick="openModal('m3')">
+        <img src="Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-12-07%20160552.png" class="pimg" alt="Pipe CFD">
+        <div class="po"></div><div class="ptg">CFD</div>
+        <div class="pb"><div class="pnum">P-03</div><div class="ptitle">CFD — Pipe Expansion Flow</div>
+        <div class="pdesc">Flow separation and reattachment downstream of a sudden pipe expansion. Laminar results were verified against the Poiseuille solution with a grid-convergence study, and k-&epsilon; and k-&omega; turbulence models were compared with published experiments at Re = 10&#8309;.</div>
+        <div class="ptools"><span class="tt">Fluent</span><span class="tt">k-&epsilon;</span><span class="tt">k-&omega;</span></div>
+        </div><div class="parr">&rarr;</div>
+      </div>
+
+      <!-- P04: Mixing Elbow -->
+      <div class="pc reveal" onclick="openModal('m4')">
+        <img src="Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-12-25%20121837.png" class="pimg" alt="Mixing Elbow">
+        <div class="po"></div><div class="ptg">CFD</div>
+        <div class="pb"><div class="pnum">P-04</div><div class="ptitle">CFD — Mixing Elbow Heat Transfer</div>
+        <div class="pdesc">Hot and cold streams mixing in a 90&deg; elbow, solved with coupled flow and energy equations in 2D and 3D. A parametric inlet-velocity study showed how jet momentum improves mixing, and the 3D model captured the Dean vortices that 2D misses.</div>
+        <div class="ptools"><span class="tt">Fluent</span><span class="tt">Heat Transfer</span><span class="tt">3D</span></div>
+        </div><div class="parr">&rarr;</div>
+      </div>
+
+      <!-- P05: Static FEA -->
+      <div class="pc reveal" onclick="openModal('m5')">
+        <img src="Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-10-25%20191912.png" class="pimg" alt="Static FEA">
+        <div class="po"></div><div class="ptg">FEA</div>
+        <div class="pb"><div class="pnum">P-05</div><div class="ptitle">Static Structural Stress Analysis</div>
+        <div class="pdesc">Parametric ANSYS study of the stress concentration factor (K<sub>t</sub>) in a steel plate with a central hole, solved for eight hole diameters and post-processed in MATLAB. The FEA curve (K<sub>t</sub> &asymp; 2.76 &rarr; 2.13) matched literature and was compared with a pin-loaded hole.</div>
+        <div class="ptools"><span class="tt">ANSYS</span><span class="tt">Von-Mises</span><span class="tt">Mesh</span></div>
+        </div><div class="parr">&rarr;</div>
+      </div>
+
+      <!-- P06: Nozzle -->
+      <div class="pc reveal" onclick="openModal('m6')">
+        <img src="Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-03-26%20001313.png" class="pimg" alt="Nozzle">
+        <div class="po"></div><div class="ptg">CFD</div>
+        <div class="pb"><div class="pnum">P-06</div><div class="ptitle">Converging Nozzle Pressure Analysis</div>
+        <div class="pdesc">ANSYS Fluent simulation of flow through a converging nozzle, mapping how static pressure falls from inlet to outlet as the cross-section narrows and the flow accelerates &mdash; a direct visual check of the pressure&ndash;velocity trade-off.</div>
+        <div class="ptools"><span class="tt">Fluent</span><span class="tt">Pressure</span><span class="tt">Nozzle</span></div>
+        </div><div class="parr">&rarr;</div>
+      </div>
+
+      <!-- P07: Generator (full width) -->
+      <div class="pc pc-wide reveal" onclick="openModal('m7')">
+        <div class="pc-wide-inner">
+          <img src="genereator%20photo.png" class="pimg" style="aspect-ratio:auto;height:100%;object-fit:cover" alt="Generator">
+          <div class="pb pb-side">
+            <div class="pnum">P-07 &middot; Group Project</div>
+            <div class="ptitle" style="font-size:22px">Gasoline Generator — Reverse Engineering</div>
+            <div class="pdesc" style="font-size:14px;margin-bottom:20px">MECH 203 group project (5 members, ~80 hours each): a portable gasoline generator was physically disassembled into 111 parts and every part was modelled in Siemens NX. My share covered the carburetor and the engine-side crank mount &mdash; 3D models and technical drawings &mdash; plus motion and ANSYS static structural analysis of the full assembly and research into the manufacturing processes used.</div>
+            <div class="ptools"><span class="tt">Siemens NX</span><span class="tt">ANSYS</span><span class="tt">Reverse Engineering</span><span class="tt">Manufacturing</span></div>
+          </div>
+        </div><div class="ptg">Mechanism</div>
       </div>
 
     </div>
@@ -533,6 +538,30 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
     </div></div>
     <div class="mtools"><span class="tt">MATLAB</span><span class="tt">Rigid Body Dynamics</span><span class="tt">Newton's Laws</span><span class="tt">Momentum</span><span class="tt">Energy Conservation</span></div>
     <a href="Presentation1.pptx" class="dl-btn" download>&#8595; Presentation (PPTX)</a>
+  </div>
+</div></div>
+
+<!-- M10: ASELSAN Internship -->
+<div class="mo" id="m10" onclick="oob(event,'m10')"><div class="md">
+  <button class="mcl" onclick="cm('m10')">&times;</button>
+  <img src="aselsan-slip-ring-balancing.gif" class="mimg" alt="Slip ring rotor unbalance animation">
+  <div class="mb">
+    <span class="mtag">Internship &middot; ASELSAN &middot; Slip Ring R&amp;D Design &middot; Aug&ndash;Sep 2026</span>
+    <div class="mtitle">Mass Unbalance in High-Speed Slip Ring Systems</div>
+    <div class="mdesc">Balancing study of a tubular aluminium slip ring rotor (0.70 kg, &Oslash;120 &times; 70 mm, 1500 rpm) carried out in the Slip Ring Design Engineering team at ASELSAN Defence System Technologies. The work traces the full chain from balance quality grade to manufacturing tolerances, balancing machine selection and acceptance criteria, based on ISO 21940.</div>
+    <button class="expand-btn" onclick="toggleExpand(this)"><span class="arrow">&#9660;</span> Detailed Introduction</button>
+    <div class="expand-content"><div class="expand-inner">
+      <h4>Tolerance &amp; Rotor Behaviour</h4>
+      <p>No balance grade exists for slip rings, so <strong>G 6.3</strong> was transferred by analogy from electrical-machine armatures, giving a permissible residual unbalance of <strong>28.1 g&middot;mm</strong> &mdash; a single 0.5 g screw consumes the whole tolerance. Rigid behaviour was verified: deflection augments unbalance by only 3.3 &times; 10<sup>&minus;7</sup>, and the first critical speed lies ~38&times; above operating speed. An inertia-based criterion (I<sub>p</sub>/I<sub>d</sub> = 1.58) and a couple-unbalance budget (85% of plane tolerance) supported <strong>conditional single-plane balancing</strong>.</p>
+      <h4>Error Budget &mdash; Key Result</h4>
+      <p>Nine error sources were combined as a root-sum-square. Machining tolerances alone give <strong>15.8 g&middot;mm</strong>, but wiring asymmetry, re-fixturing and bonding raise the total to <strong>54.8 g&middot;mm (1.95&times; the limit)</strong>. Halving every machining tolerance improves the result by only <strong>3.3%</strong>, while three zero-cost assembly measures &mdash; symmetric conductor routing, single-setup machining and symmetric bonding &mdash; bring it down to <strong>20.3 g&middot;mm</strong>, within tolerance.</p>
+      <h4>Machine, Acceptance &amp; Correction</h4>
+      <p>Three balancing machines were evaluated against an adequacy criterion; all exceeded it by &ge;33&times;, so fixturing decided the selection. Measurement uncertainty is dominated by remounting repeatability (~&frac34;), not instrument resolution. Acceptance limits subtract uncertainty from the tolerance, with angular-scan, speed-scan and 30-minute run verification. An axial end-face <strong>T-slot</strong> was chosen for correction to keep design flexibility at prototype stage.</p>
+      <h4>Side Project &mdash; Ergonomic Tool Holder</h4>
+      <p>Designed in <strong>Siemens NX</strong> and produced by <strong>additive manufacturing</strong>: an inclined, pocketed holder mounted from beneath the bench with a single concealed screw, freeing the assembly &amp; soldering station's working area. Placed in service at the station.</p>
+    </div></div>
+    <div class="mtools"><span class="tt">ISO 21940</span><span class="tt">Rotor Balancing</span><span class="tt">Tolerance Analysis</span><span class="tt">RSS Error Budget</span><span class="tt">Measurement Uncertainty</span><span class="tt">Siemens NX</span><span class="tt">Additive Manufacturing</span></div>
+    <a href="Bertan_Erman_ASELSAN_Internship_Report.pdf" class="dl-btn" target="_blank">&#8595; View Report (PDF)</a>
   </div>
 </div></div>
 
