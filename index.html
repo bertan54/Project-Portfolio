@@ -4,9 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bertan Erman — Mechanical Engineering Portfolio</title>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<!-- Google Analytics 4
+     SETUP: analytics.google.com -> Admin -> Data streams -> your web stream -> copy the "Measurement ID" (G-XXXXXXXXXX)
+     and paste it into GA_ID below. Until then nothing is loaded and no data is sent.
+     Visitors who have "Do Not Track" enabled are not tracked. -->
+<script>
+(function(){
+  var GA_ID='G-XXXXXXXXXX';
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=function(){dataLayer.push(arguments);};
+  if(GA_ID==='G-XXXXXXXXXX'||!/^G-[A-Z0-9]{6,}$/.test(GA_ID)||navigator.doNotTrack==='1')return;
+  var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);
+  gtag('js',new Date());gtag('config',GA_ID);
+})();
+</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23080c10'/%3E%3Ctext x='50' y='68' font-family='monospace' font-size='52' font-weight='700' fill='%2300d2ff' text-anchor='middle'%3EBE%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -38,6 +49,10 @@ h1 span.hl{color:transparent;-webkit-text-stroke:1px var(--cyan)}
 .btn-p:hover{background:#fff;transform:translateY(-2px)}
 .btn-g{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);background:transparent;border:1px solid var(--border);padding:14px 28px;text-decoration:none;display:inline-block;transition:all .2s}
 .btn-g:hover{border-color:var(--cyan);background:rgba(0,210,255,.05)}
+.hero-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.btn-i{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:11px 18px;text-decoration:none;transition:all .2s}
+.btn-i:hover{color:var(--cyan);border-color:var(--cyan);background:rgba(0,210,255,.05)}
+.btn-i svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
 .hero-stats{position:absolute;right:48px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:32px}
 .stat{text-align:right;border-right:2px solid var(--cyan);padding-right:16px;opacity:0;animation:fir .6s ease forwards}
 .stat:nth-child(1){animation-delay:.8s}.stat:nth-child(2){animation-delay:1s}.stat:nth-child(3){animation-delay:1.2s}
@@ -158,7 +173,7 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .hero-content>*{opacity:0;animation:fu .7s ease forwards}
-.hero-label{animation-delay:.2s}.hero-content h1{animation-delay:.4s}.hero-desc{animation-delay:.55s}.hero-cta{animation-delay:.7s}
+.hero-label{animation-delay:.2s}.hero-content h1{animation-delay:.4s}.hero-desc{animation-delay:.55s}.hero-cta{animation-delay:.7s}.hero-links{animation-delay:.85s}
 @keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--cyan2)}
 
@@ -218,6 +233,11 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
     <div class="hero-cta">
       <a href="#projects" class="btn-p">View Projects</a>
       <a href="#contact" class="btn-g">Get in Touch</a>
+    </div>
+    <div class="hero-links">
+      <a href="https://www.linkedin.com/in/bertan-erman/" target="_blank" rel="noopener" class="btn-i" data-track="click_linkedin" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
+      <a href="https://github.com/bertan54/Project-Portfolio" target="_blank" rel="noopener" class="btn-i" data-track="click_github" aria-label="GitHub repository"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 22.3 24 17.8 24 12.5 24 5.87 18.63.5 12 .5z"/></svg>GitHub</a>
+      <a href="Bertan_Erman_CV.pdf" download="Bertan_Erman_CV.pdf" class="btn-i" data-track="cv_download" aria-label="Download CV as PDF"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v9.17l3.59-3.58L18 10l-6 6-6-6 1.41-1.41L11 12.17V3zM5 19h14v2H5z"/></svg>CV (PDF)</a>
     </div>
   </div>
 </section>
@@ -408,7 +428,9 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
       <div class="cls reveal">
         <a href="mailto:bertanerman54@gmail.com" class="clink"><span class="cion">&#9993;</span><div><span class="clbl">Email</span>bertanerman54@gmail.com</div></a>
         <a href="tel:+905388875404" class="clink"><span class="cion">&#9742;</span><div><span class="clbl">Phone</span>+90 538 887 54 04</div></a>
-        <a href="https://www.linkedin.com/in/bertan-erman/" target="_blank" class="clink"><span class="cion" style="font-weight:700;font-family:serif">in</span><div><span class="clbl">LinkedIn</span>linkedin.com/in/bertan-erman</div></a>
+        <a href="https://www.linkedin.com/in/bertan-erman/" target="_blank" rel="noopener" class="clink" data-track="click_linkedin"><span class="cion" style="font-weight:700;font-family:serif">in</span><div><span class="clbl">LinkedIn</span>linkedin.com/in/bertan-erman</div></a>
+        <a href="https://github.com/bertan54/Project-Portfolio" target="_blank" rel="noopener" class="clink" data-track="click_github"><span class="cion" style="font-weight:700;font-family:'Space Mono',monospace;font-size:14px">&lt;/&gt;</span><div><span class="clbl">GitHub</span>github.com/bertan54/Project-Portfolio</div></a>
+        <a href="Bertan_Erman_CV.pdf" download="Bertan_Erman_CV.pdf" class="clink" data-track="cv_download"><span class="cion">&#8595;</span><div><span class="clbl">Resume</span>Download CV (PDF)</div></a>
 
       </div>
     </div>
@@ -658,6 +680,8 @@ function toggleTheme(){const t=document.documentElement;const btn=document.getEl
 (function(){const s=localStorage.getItem('theme');if(s==='light'){document.documentElement.setAttribute('data-theme','light');document.getElementById('themeToggle').innerHTML='\u2600';}})();
 document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.mo.active').forEach(m=>{m.classList.remove('active');document.body.style.overflow=''})});
 function toggleExpand(btn){btn.classList.toggle('open');btn.nextElementSibling.classList.toggle('open')}
+/* Analytics events for LinkedIn / GitHub / CV clicks (no-op until GA_ID is set) */
+document.addEventListener('click',e=>{const a=e.target.closest('[data-track]');if(a&&typeof gtag==='function')gtag('event',a.dataset.track,{link_url:a.getAttribute('href')})});
 </script>
 </body>
 </html>
