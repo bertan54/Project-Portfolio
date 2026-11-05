@@ -172,6 +172,17 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
 
 /* Lazy load for large GIFs */
 .lazy-gif{background:linear-gradient(135deg,var(--bg3),var(--bg2));min-height:200px;display:flex;align-items:center;justify-content:center}
+/* Repkon diagram card */
+.rk-vis{background:var(--bg);display:flex;align-items:center;justify-content:center;padding:24px;min-height:260px}
+.rk-vis svg{width:100%;max-width:440px;height:auto}
+.rk-b{fill:var(--bg3);stroke:var(--border);stroke-width:1.5}
+.rk-hl{stroke:var(--cyan)}
+.rk-l{stroke:var(--cyan);stroke-width:1.5}
+.rk-ar{fill:var(--cyan)}
+.rk-h{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.15em;fill:var(--cyan)}
+.rk-t{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;fill:var(--white);text-anchor:middle}
+.rk-s{font-family:'Space Mono',monospace;font-size:8.5px;fill:var(--muted);text-anchor:middle}
+.mb ul{margin:0 0 12px 18px}.mb li{margin-bottom:6px}
 .lazy-gif::before{content:'Loading animation...';font-family:'Space Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.1em}
 </style>
 </head>
@@ -203,7 +214,7 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
   <div class="hero-content">
     <div class="hero-label">Portfolio</div>
     <h1>Bertan<br><span class="hl">Erman</span></h1>
-    <p class="hero-desc">Mechanical Engineering student turning complex physical problems into precise computational solutions — through FEA, CFD, dynamic simulation, and hands-on mechanism design.</p>
+    <p class="hero-desc">Mechanical Engineering &amp; Economics student working where design meets manufacturing &mdash; from CNC process routes and data-driven quoting tools on the shop floor to tolerance and balancing studies in R&amp;D, with FEA and CFD as supporting tools.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn-p">View Projects</a>
       <a href="#contact" class="btn-g">Get in Touch</a>
@@ -223,7 +234,7 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
       <div class="at reveal">
         <h3>From Equations to Engineering</h3>
         <p>I'm a Mechanical Engineering student at Ko&ccedil; University with a double major in Economics, and I spent an Erasmus exchange semester at the University of Mannheim in Germany.</p>
-        <p>My internships have taken me from the shop floor to R&amp;D. At Repkon I worked alongside process engineers on CNC turning, milling and 5-axis machining, tooling strategies and production routes. At ASELSAN, in the Slip Ring Design Engineering team, I carried out a rotor balancing study that linked balance quality grades to manufacturing tolerances, assembly and acceptance testing.</p>
+        <p>My internships have taken me from the shop floor to R&amp;D. At Repkon I worked alongside process engineers on CNC turning, milling and 5-axis machining, tooling strategies and production routes, and built a Python tool that automates ERP data entry and suggests quotes from similar past parts. At ASELSAN, in the Slip Ring Design Engineering team, I carried out a rotor balancing study that linked balance quality grades to manufacturing tolerances, assembly and acceptance testing.</p>
         <p>Through my coursework I've built hands-on experience in structural FEA and CFD in ANSYS, CAD and motion simulation in Siemens NX, and numerical modelling in MATLAB. I'm most interested in mechanical design and manufacturing, where my economics background helps me think about cost, production and supply chain alongside the engineering.</p>
       </div>
     </div>
@@ -245,6 +256,36 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
             <div class="ptitle" style="font-size:22px">Mass Unbalance in High-Speed Slip Ring Systems</div>
             <div class="pdesc" style="font-size:14px;margin-bottom:20px">R&amp;D internship study: balance grade selection, rigid-rotor verification, plane-count decision and a full manufacturing &amp; assembly error budget for a slip ring rotor — showing that assembly, not machining precision, governs residual unbalance.</div>
             <div class="ptools"><span class="tt">ISO 21940</span><span class="tt">Rotor Balancing</span><span class="tt">Tolerance Analysis</span><span class="tt">Error Budget</span></div>
+          </div>
+        </div><div class="ptg">Internship</div>
+      </div>
+
+      <!-- P11: Repkon Internship — ERP automation & quoting prototype (wide) -->
+      <div class="pc pc-wide reveal" onclick="openModal('m11')">
+        <div class="pc-wide-inner">
+          <div class="rk-vis" aria-label="Diagram: Excel routing template to validation to ERP; new part matched to closest historical part">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs><marker id="rka" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="rk-ar"/></marker></defs>
+              <text x="20" y="34" class="rk-h">PHASE 1 &middot; DATA ENTRY</text>
+              <rect x="20" y="46" width="100" height="52" class="rk-b"/><text x="70" y="70" class="rk-t">Excel</text><text x="70" y="86" class="rk-s">routing template</text>
+              <rect x="150" y="46" width="100" height="52" class="rk-b rk-hl"/><text x="200" y="70" class="rk-t">Validate</text><text x="200" y="86" class="rk-s">poka-yoke checks</text>
+              <rect x="280" y="46" width="100" height="52" class="rk-b"/><text x="330" y="70" class="rk-t">IFS ERP</text><text x="330" y="86" class="rk-s">routes &amp; times</text>
+              <line x1="120" y1="72" x2="148" y2="72" class="rk-l" marker-end="url(#rka)"/>
+              <line x1="250" y1="72" x2="278" y2="72" class="rk-l" marker-end="url(#rka)"/>
+              <text x="20" y="160" class="rk-h">PHASE 2 &middot; QUOTING</text>
+              <rect x="20" y="172" width="100" height="52" class="rk-b"/><text x="70" y="196" class="rk-t">New part</text><text x="70" y="212" class="rk-s">material + size</text>
+              <rect x="150" y="172" width="100" height="52" class="rk-b rk-hl"/><text x="200" y="196" class="rk-t">Penalty</text><text x="200" y="212" class="rk-s">weighted score</text>
+              <rect x="280" y="172" width="100" height="52" class="rk-b"/><text x="330" y="196" class="rk-t">Closest</text><text x="330" y="212" class="rk-s">past route &amp; time</text>
+              <line x1="120" y1="198" x2="148" y2="198" class="rk-l" marker-end="url(#rka)"/>
+              <line x1="250" y1="198" x2="278" y2="198" class="rk-l" marker-end="url(#rka)"/>
+              <text x="200" y="268" class="rk-s">Python &middot; Pandas &middot; SQLite &middot; desktop .exe</text>
+            </svg>
+          </div>
+          <div class="pb pb-side">
+            <div class="pnum">P-11 &middot; Internship &middot; Repkon Manufacturing</div>
+            <div class="ptitle" style="font-size:22px">ERP Automation &amp; Similar-Part Quoting Tool</div>
+            <div class="pdesc" style="font-size:14px;margin-bottom:20px">Production &amp; process internship at a high-precision contract machining shop. I spotted that quotes and production routes were typed twice &mdash; Excel first, then line by line into the ERP &mdash; pitched a fix to the factory manager, and built it: a Python tool that validates and loads routing data automatically, plus a prototype that finds the closest previously machined part to reuse its route and times.</div>
+            <div class="ptools"><span class="tt">Python</span><span class="tt">Pandas</span><span class="tt">ERP (IFS)</span><span class="tt">Process Planning</span><span class="tt">CNC / CAM</span></div>
           </div>
         </div><div class="ptg">Internship</div>
       </div>
@@ -502,9 +543,7 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
       <p>Bertan Erman: <strong>Carburetor</strong> and <strong>Crank Mount (Engine Side)</strong> — 3D modeling, technical drafting (2 sheets each). Motion analysis and ANSYS static structural analysis on full assembly. Manufacturing processes (injection molding, casting) researched.</p>
     </div></div>
     <div class="mtools"><span class="tt">Siemens NX</span><span class="tt">ANSYS</span><span class="tt">Technical Drawing</span><span class="tt">Reverse Engineering</span><span class="tt">Manufacturing</span></div>
-    <a href="MECH203_Project_Report_GROUP3.pdf" class="dl-btn" target="_blank">&#8595; View Report (PDF)</a>
-    <a href="bolat,erman,ucar,ozgumus,zengin.pptx" class="dl-btn" download>&#8595; Presentation (PPTX)</a>
-  </div>
+    <a href="MECH203_Project_Report_GROUP3.pdf" class="dl-btn" target="_blank">&#8595; View Report (PDF)</a>  </div>
 </div></div>
 
 <!-- M8: Rotational-to-Linear -->
@@ -562,6 +601,33 @@ footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);le
     </div></div>
     <div class="mtools"><span class="tt">ISO 21940</span><span class="tt">Rotor Balancing</span><span class="tt">Tolerance Analysis</span><span class="tt">RSS Error Budget</span><span class="tt">Measurement Uncertainty</span><span class="tt">Siemens NX</span><span class="tt">Additive Manufacturing</span></div>
     <a href="Bertan_Erman_ASELSAN_Internship_Report.pdf" class="dl-btn" target="_blank">&#8595; View Report (PDF)</a>
+  </div>
+</div></div>
+
+<!-- M11: Repkon Internship -->
+<div class="mo" id="m11" onclick="oob(event,'m11')"><div class="md">
+  <button class="mcl" onclick="cm('m11')">&times;</button>
+  <div class="mb" style="padding-top:56px">
+    <span class="mtag">Internship &middot; Repkon Manufacturing &middot; Production &amp; Process &middot; Sep 2025</span>
+    <div class="mtitle">ERP Automation &amp; Similar-Part Quoting Tool</div>
+    <div class="mdesc">Repkon Manufacturing machines high-precision, low-to-medium volume parts to customer drawings, mostly for the defence sector. In the Process Department I followed parts from drawing to final inspection, helped build production routes and entered them into the IFS ERP system &mdash; and turned the biggest bottleneck I saw there into my own project.</div>
+    <button class="expand-btn" onclick="toggleExpand(this)"><span class="arrow">&#9660;</span> Detailed Introduction</button>
+    <div class="expand-content"><div class="expand-inner">
+      <h4>The Problem</h4>
+      <p>Every new quote and production route was compiled in Excel by an engineer and then re-typed, line by line, into the ERP. Large multi-part quotes could take hours or days, typos in part numbers or times had to be traced across departments, and very similar parts sometimes received different routes, times and prices because nobody could quickly find the earlier one.</p>
+      <h4>What I Did</h4>
+      <p>I documented the issue, proposed a solution to the factory manager and, with his approval, led the first two phases myself:</p>
+      <ul>
+        <li><strong>Phase 1 &mdash; data-entry pipeline:</strong> a standardised Excel template and a Python/Pandas tool that reads parts, multi-step routes and operation times, and validates them before anything reaches the database (empty critical fields, text in numeric fields &mdash; a poka-yoke step built into the code).</li>
+        <li><strong>Phase 2 &mdash; quoting prototype:</strong> a weighted penalty-scoring algorithm that compares a new part's material and dimensions with every previously machined part and returns the closest match together with its proven route and times.</li>
+      </ul>
+      <p>Both were packaged as a standalone desktop application (.exe) and handed over for user acceptance testing by the process and engineering teams. The internship ended at the prototype stage, so the effect on quote lead time was not measured.</p>
+      <h4>On the Shop Floor</h4>
+      <p>I followed a large 5-axis milled aluminium (7075) structural part and a turned hot-work steel (1.2344) extrusion die through their full routes: CAM in ESPRIT, roughing and finishing, outsourced deep-hole drilling and heat treatment, deburring and CMM inspection. Comparing planned and actual routes showed where time is really lost &mdash; for example, a part that had to move to a second machine because angled holes could not be made in the first setup. During in-process measurement of the die with a Romer arm I found a missing dimension and reported it to the operator, and it was corrected before the part left the machine.</p>
+      <h4>What I Took Away</h4>
+      <p>Reading drawings and GD&amp;T as the shared language between design, process and quality; choosing machines and tools by geometry and ISO material group; and seeing that cost and lead time are mostly decided in process planning &mdash; which is why I keep developing the similar-part quoting idea as my own project.</p>
+    </div></div>
+    <div class="mtools"><span class="tt">Python</span><span class="tt">Pandas</span><span class="tt">SQLite</span><span class="tt">ETL</span><span class="tt">IFS ERP</span><span class="tt">Poka-Yoke</span><span class="tt">ESPRIT CAM</span><span class="tt">5-Axis Milling</span><span class="tt">CNC Turning</span><span class="tt">CMM / Romer</span><span class="tt">GD&amp;T</span></div>
   </div>
 </div></div>
 
